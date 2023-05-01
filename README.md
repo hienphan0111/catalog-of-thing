@@ -56,6 +56,7 @@ In this project, we create a console app that will help you to keep a record of 
 
 Everything will be based on the UML class diagram presented below. The data will be stored in JSON files, furthermore, we prepared a database with tables structure analogical to the program's class structure.
 
+<!--
 </br>
  <div align="center">
    <kbd>
@@ -63,6 +64,7 @@ Everything will be based on the UML class diagram presented below. The data will
     <p>Catalog of my things Console App</p>
    </kbd>
 </div>
+-->
 
 </br>
  <div align="center">
@@ -74,16 +76,15 @@ Everything will be based on the UML class diagram presented below. The data will
 
 ### Tech Stack <a name="tech-stack"></a>
 
-Ruby
+ - Ruby  <img src="https://cdn.emojidex.com/emoji/seal/Ruby.png" width=15px>
+ - PostgreSQL <img src="https://user-images.githubusercontent.com/80895497/142954032-f7072df9-3586-48f9-a9e0-7fdd284eb833.png" width=15px>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- Add Person, Student, and Teacher classes.
-- Use the "Decorator" design pattern.
-- Add basic UI.
-- Preserve data.
+- Add, list and preserve books, music albums, movies, games data.
+- Basic UI.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,21 +152,21 @@ rspec spec rspec
 
 👤 **Hien Phan**
 
-- GitHub: [Github](https://github.com/hienphan0111)
-- Twitter: [Twister](https://twitter.com/hienphan0111)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hien-phan-61097b256/)
+- GitHub: [hienphan0111](https://github.com/hienphan0111)
+- Twitter: [hienphan0111](https://twitter.com/hienphan0111)
+- LinkedIn: [mr-hienphan](https://www.linkedin.com/in/hien-phan-61097b256/)
 
 👤 **Stanley Kibor**
 
-- GitHub: [@githubhandle](https://github.com/chepkok3)
-- Twitter: [@twitterhandle](https://twitter.com/@stanleykibor3)
-- LinkedIn: [linkedIn](https://www.linkedin.com/in/......)
+- GitHub: [Stanley Kibor](https://github.com/chepkok3)
+- Twitter: [Stanley Kibor](https://twitter.com/@stanleykibor3)
+- LinkedIn: [Stanley Kibor](https://www.linkedin.com/in/......)
 
 👤 **Alice Mirigo**
 
-- GitHub: [Github](https://github.com/alicemirigo92)
-- Twitter: [Twister](https://twitter.com/......)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alice-mirigo/)
+- GitHub: [Alice Mirigo](https://github.com/alicemirigo92)
+- Twitter: [Alice Mirigo](https://twitter.com/......)
+- LinkedIn: [Alice Mirigo](https://www.linkedin.com/in/alice-mirigo/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
