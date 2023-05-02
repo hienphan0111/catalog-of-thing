@@ -1,5 +1,6 @@
 require_relative '../utils/file_io'
 require_relative '../modules/book_options'
+require_relative '../modules/music_options'
 
 class App
   MENU = %('

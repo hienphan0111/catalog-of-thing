@@ -8,8 +8,8 @@ class BookOptions
   def initialize
     @file = IOFile.new('./database/books.json')
     data = @file.read_data
-    data.empty? ? @books = [] : @books = data.books
-    data.empty? ? @labels = [] : @labels = data.labels
+    @books = data.empty? ? [] : data.books
+    @labels = data.empty? ? [] : data.labels
   end
 
   def add_book()
@@ -54,11 +54,13 @@ class BookOptions
     if @books.empty?
       puts 'There are no books in collection'
     else
-      @books.each_with_index { |book, i| puts `${i}) ID: ${@book.id}, Publish date: ${book.publish_date} Publisher: ${book.publisher} ${book.cover_state}`} 
+      @books.each_with_index do |_book, _i|
+        puts `${i}) ID: ${@book.id}, Publish date: ${book.publish_date} Publisher: ${book.publisher} ${book.cover_state}`
+      end
     end
   end
 
   def list_all_labels
-    @books.each_with_index { |book, i| puts `${i}) ID: ${@label.id}, Title: ${@label.title}, Color: ${@label.color}`}
+    @books.each_with_index { |_book, _i| puts `${i}) ID: ${@label.id}, Title: ${@label.title}, Color: ${@label.color}` }
   end
 end
