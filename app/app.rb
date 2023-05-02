@@ -2,7 +2,7 @@ require_relative '../utils/file_io'
 require_relative '../modules/book_options'
 
 class App
-  MENU = %('
+  MENU = %(
   CHOOSE THE FOLLOWING COMMAND BY ENTER THE NUMBER:
   1. List all books
   2. List all music albums
@@ -16,10 +16,10 @@ class App
   10. Add a movie
   11. Add a game
   12. Exit app
-  ').freeze
+  ).freeze
 
   def initialize
-    @bookOptions = BookOptions.new
+    @book_pptions = BookOptions.new
   end
 
   def show_menu
@@ -42,7 +42,7 @@ class App
   def list_items(cmd_key)
     case cmd_key
     when '1'
-      @bookOptions.list_all_books
+      @book_options.list_all_books
     when '2'
       puts 'List all music albums'
     when '3'
@@ -63,7 +63,7 @@ class App
   def add_item(cmd_key)
     case cmd_key
     when '8'
-      puts @bookOptions.add_book
+      puts @book_options.add_book
     when '9'
       puts 'add a music album'
     when '10'
