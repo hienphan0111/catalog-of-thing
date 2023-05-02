@@ -26,7 +26,7 @@ module MusicModule
   end
 
   def list_all_genres
-    @musics = JSON.parse(File.read('musics.json')) if File.exist?('musics.json') && File.read('musics.json') != ''
+    @musics = JSON.parse(File.read('musics.json')) if File.exist?('musics.json') && !File.empty?('musics.json')
     if @musics.empty?
       puts ''
     else
@@ -40,7 +40,7 @@ module MusicModule
   end
 
   def list_all_music_albums
-    @musics = JSON.parse(File.read('musics.json')) if File.exist?('musics.json') && File.read('musics.json') != ''
+    @musics = JSON.parse(File.read('musics.json')) if File.exist?('musics.json') && !File.empty?('musics.json')
     if @musics.empty?
       puts 'No music currently saved'
     else
