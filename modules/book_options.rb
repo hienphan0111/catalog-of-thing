@@ -1,15 +1,17 @@
 require_relative '../components/book'
 require_relative '../utils/file_io'
 require_relative '../components/label'
+require 'json'
 
 class BookOptions
   attr_reader :books, :label
 
-  def initialize
-    @file = IOFile.new('./database/books.json')
-    data = @file.read_data
-    data.empty? ? @books = [] : @books = data.books
-    data.empty? ? @labels = [] : @labels = data.labels
+  def initialize()
+    @file_books = IOFile.new('./database/books.json')
+    @file_labels = IOFile.new('./database/labels.json')
+
+    @books = @file_books.read_data
+    @labels = @file_labels.read_data
   end
 
   def add_book()
@@ -25,7 +27,9 @@ class BookOptions
     book = Book.new(publish_date, publisher, cover_state)
     book.label = label
     @books << book
-    @file.write_data(self)
+    @file_books.write_data(@books)
+    puts 'The book was added successful'
+    puts
   end
 
   def handle_label(key)
@@ -36,7 +40,7 @@ class BookOptions
       num = gets.chomp.to_i
       @label[num]
     when 'N'
-      label = create_new_label
+      create_new_label
     end
   end
 
@@ -47,6 +51,7 @@ class BookOptions
     color = gets.chomp
     label = Label.new(title, color)
     @labels << label
+    @file_labels.write_data(@labels)
     label
   end
 
@@ -54,11 +59,28 @@ class BookOptions
     if @books.empty?
       puts 'There are no books in collection'
     else
-      @books.each_with_index { |book, i| puts `${i}) ID: ${@book.id}, Publish date: ${book.publish_date} Publisher: ${book.publisher} ${book.cover_state}`} 
+      @books.each_with_index do |book, i|
+        puts "#{i}) ID: #{book.id}, Publish date: #{book.publish_date} Publisher: #{book.publisher} #{book.cover_state}"
+      end
     end
   end
 
   def list_all_labels
-    @books.each_with_index { |book, i| puts `${i}) ID: ${@label.id}, Title: ${@label.title}, Color: ${@label.color}`}
+    if @labels.empty?
+      puts 'There are no labels in collection'
+    else
+      @books.each_with_index { |label, i| puts "#{i}) ID: #{label.id}, Title: #{label.title}, Color: #{label.color}" }
+    end
+  end
+
+  def to_json(*arg)
+    {
+      JSON.create_id => self.class.name,
+      'a' => [@books, @labels]
+    }.to_json(*arg)
+  end
+
+  def self.json_create(object)
+    new(*object['a'])
   end
 end
