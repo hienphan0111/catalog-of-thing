@@ -5,7 +5,7 @@ AllCops:
     - 'Guardfile'
     - 'Rakefile'
     - 'node_modules/**/*'
-    - 'rspec/**/*'
+    - 'spec/**/*'
 
   DisplayCopNames: true
   Metrics/MethodLength:
