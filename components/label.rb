@@ -12,8 +12,12 @@ class Label
   end
 
   def add_item(item)
-    @items << item unless @items.exist?(item)
+    @items << item unless @items.include?(item)
     item.label = self
+  end
+
+  def show(mess)
+    puts mess
   end
 
   def to_json(*arg)
