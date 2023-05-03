@@ -21,7 +21,7 @@ class MusicModule
     print 'To Select genre from the list press [S] or create new one press [N] '
     key = gets.chomp.upcase
     genre = handle_genre(key)
-    music_album = MusicAlbum.new(name, on_spotify,publish_date, genre)
+    music_album = MusicAlbum.new(name, on_spotify, publish_date, genre)
     @music_albums << music_album
     @file_music_album.write_data(@music_albums)
     puts '*************** Music album was add successfully!!***************'
@@ -66,8 +66,8 @@ class MusicModule
       puts 'All saved music'
       puts "---------------\n"
       @music_albums.each_with_index do |music, index|
-        puts "#{index + 1}) \"#{music.item['name']}\", genre: #{music.item['genre']},
-        publish_date: #{music.item['publish_date']},on_spotify: #{music.item['on_spotify']}."
+        print "#{index + 1}) Name: #{music.name}, publish date: #{music.publish_date},"
+        print " on spotify: #{music.on_spotify}, Genre: #{music.genre.name} \n"
       end
     end
   end

@@ -72,16 +72,4 @@ class BookOptions
       @labels.each_with_index { |label, i| puts "#{i}) ID: #{label.id}, Title: #{label.title}, Color: #{label.color}" }
     end
   end
-
-  def to_json(*arg)
-    {
-      JSON.create_id => self.class.name,
-      'a' => [@books, @labels]
-    }.to_json(*arg)
-  end
-
-  def self.json_create(object)
-    new(*object['a'])
-  end
 end
-

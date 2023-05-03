@@ -5,10 +5,10 @@ class Main
 
   key = ''
 
-  until key == '12'
+  until key == '10'
     app.show_menu
     key = gets.chomp
-    app.run(key)
+    app.run(key) unless key == '10'
   end
   puts 'Thanks for using app'
 end
