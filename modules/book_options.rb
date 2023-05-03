@@ -28,7 +28,7 @@ class BookOptions
     book.label = label
     @books << book
     @file_books.write_data(@books)
-    puts 'The book was added successful'
+    puts 'The book was added successfull'
     puts
   end
 
@@ -69,18 +69,7 @@ class BookOptions
     if @labels.empty?
       puts 'There are no labels in collection'
     else
-      @books.each_with_index { |label, i| puts "#{i}) ID: #{label.id}, Title: #{label.title}, Color: #{label.color}" }
+      @labels.each_with_index { |label, i| puts "#{i}) ID: #{label.id}, Title: #{label.title}, Color: #{label.color}" }
     end
-  end
-
-  def to_json(*arg)
-    {
-      JSON.create_id => self.class.name,
-      'a' => [@books, @labels]
-    }.to_json(*arg)
-  end
-
-  def self.json_create(object)
-    new(*object['a'])
   end
 end
