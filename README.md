@@ -180,7 +180,7 @@ rspec spec rspec
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Unit tests
+- Movies and source features
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

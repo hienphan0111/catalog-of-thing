@@ -1,16 +1,32 @@
 require_relative 'spec_helper'
 
 describe MusicAlbum do
-  context '#initialize' do
-    it 'creates a new instance of the MusicAlbum class' do
-      music = MusicAlbum.new(true)
-      expect(music).to be_an_instance_of MusicAlbum
+
+  before :each do
+    @music_album = MusicAlbum.new('Album',true,'2022-10-13')
+    @genre = Genre.new('Rock')
+  end
+
+  describe "#new" do
+    it "return a new book object" do
+      @music_album.should be_an_instance_of MusicAlbum
     end
   end
-  context '#can_be_archived?' do
-    it 'returns true if the it is true the music is no spotify' do
-      music = MusicAlbum.new(true)
-      expect(music.can_be_archived?).to be(true)
+
+  describe "#publish_date" do
+    it "returns the correct publish date" do
+      @music_album.publish_date.should eql Date.parse("2022-10-13")
     end
   end
+
+  describe "#bublisher" do
+    it "returns the correct title" do
+      @music_album.name.should eql "Album"
+    end
+  end
+
+  it "return true when on spotify is 'y' " do
+    @music_album.can_be_archived?().should be true
+  end
+
 end

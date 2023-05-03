@@ -1,4 +1,5 @@
 require_relative './item'
+require_relative './author'
 require 'json'
 
 class Game < Item
@@ -14,11 +15,11 @@ class Game < Item
 
   def author=(author)
     @author = author
-    author.games << self unless author.games.include?(self)
+    author.items << self unless author.items.include?(self)
   end
 
   def can_be_archived?
-    Date.parse(@last_played_at) < Date.today.prev_year(2) && super
+    @last_played_at < Date.today.prev_year(2) && super
   end
 
   def to_json(*arg)

@@ -38,7 +38,7 @@ class BookOptions
       puts 'Select label by enter the order number of following list '
       list_all_labels
       num = gets.chomp.to_i
-      @label[num]
+      @labels[num]
     when 'N'
       create_new_label
     end
