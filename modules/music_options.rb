@@ -15,8 +15,7 @@ module MusicModule
     MusicAlbum.new(on_spotify)
     new_genre = Genre.new(genre)
 
-    music_struct = ItemStruct.new(name:, genre:, publish_date:,
-                                  on_spotify:)
+    music_struct = ItemStruct.new(name:, genre:, publish_date:, on_spotify:)
     json = JSON.generate(music_struct)
     @musics << json
     File.write('musics.json', @musics)
