@@ -27,6 +27,11 @@ class MusicModule
     puts '*************** Music album was add successfully!!***************'
   end
 
+  music_struct = ItemStruct.new(name:, genre:, publish_date:, on_spotify:)
+  json = JSON.generate(music_struct)
+  @musics << json
+  File.write('musics.json', @musics)
+
   def handle_genre(key)
     case key
     when 'S'
