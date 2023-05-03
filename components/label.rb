@@ -1,7 +1,6 @@
 require_relative './item'
 
 class Label
-
   attr_accessor :title, :color
   attr_reader :id, :items
 
@@ -24,7 +23,7 @@ class Label
     }.to_json(*arg)
   end
 
-  def json_create(object)
+  def self.json_create(object)
     new(*object['a'])
   end
 end

@@ -1,7 +1,6 @@
 require 'json'
 
 class IOFile
-
   def initialize(file_name)
     @path = File.expand_path(file_name)
   end
@@ -10,13 +9,13 @@ class IOFile
     return [] unless File.exist?(@path)
 
     data = File.read(@path)
-    data.empty? ? [] : JSON.parse(data, create_additions: true) 
-    
+    json = data.split
+    json.map { |item| JSON.parse(item, create_additions: true) }
   end
 
   def write_data(data)
     file = File.open(@path, 'w')
-    json = JSON.generate(data)
+    json = data.map { |item| JSON.generate(item) }
     file.puts(json)
     file.close
   end
