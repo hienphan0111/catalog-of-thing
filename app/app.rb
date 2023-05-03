@@ -1,9 +1,10 @@
 require_relative '../utils/file_io'
 require_relative '../modules/book_options'
+require_relative '../modules/music_module'
 
 class App
   MENU = %(
-  CHOOSE THE FOLLOWING COMMAND BY ENTER THE NUMBER:
+  CHOOSE THE FOLLOWING COMMAND BY ENTERRING THE NUMBER:
   1. List all books
   2. List all music albums
   3. List all movies
@@ -19,7 +20,8 @@ class App
   ).freeze
 
   def initialize
-    @book_pptions = BookOptions.new
+    @book_options = BookOptions.new
+    @music_options = MusicModule.new
   end
 
   def show_menu
@@ -44,13 +46,13 @@ class App
     when '1'
       @book_options.list_all_books
     when '2'
-      puts 'List all music albums'
+      @music_options.list_all_music_albums
     when '3'
       puts 'List all movies'
     when '4'
-      puts "List all genres (e.g. 'Comedy, 'Thriller')"
+      @music_options.list_all_genres
     when '5'
-      puts "List all labels (e.g. 'Gift', 'New')"
+      @book_options.list_all_labels
     when '6'
       puts "List all authors (e.g. 'Stephen King')"
     when '7'
@@ -65,7 +67,7 @@ class App
     when '8'
       puts @book_options.add_book
     when '9'
-      puts 'add a music album'
+      @music_options.add_album
     when '10'
       puts 'add a movie'
     when '11'
