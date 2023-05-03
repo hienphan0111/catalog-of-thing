@@ -1,6 +1,6 @@
 require_relative '../utils/file_io'
 require_relative '../modules/book_options'
-require_relative '../modules/music_module'
+require_relative '../modules/music_options'
 require_relative '../modules/game_options'
 
 class App
