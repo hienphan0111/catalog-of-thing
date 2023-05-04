@@ -27,8 +27,6 @@
 
 # Ruby Group Capstone : Catalog of my things
 
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -49,10 +47,11 @@
 
 # 📖About the Project <a name="about-project"></a>
 
-In this project, we create a console app that will help you to keep a record of different types of things you won: 
- - **Books**
- - **Music albums**
- - **Games** 
+In this project, we create a console app that will help you to keep a record of different types of things you won:
+
+- **Books**
+- **Music albums**
+- **Games**
 
 Everything will be based on the UML class diagram presented below. The data will be stored in JSON files, furthermore, we prepared a database with tables structure analogical to the program's class structure.
 
@@ -76,8 +75,8 @@ Everything will be based on the UML class diagram presented below. The data will
 
 ### Tech Stack <a name="tech-stack"></a>
 
- - Ruby  <img src="https://cdn.emojidex.com/emoji/seal/Ruby.png" width=15px>
- - PostgreSQL <img src="https://user-images.githubusercontent.com/80895497/142954032-f7072df9-3586-48f9-a9e0-7fdd284eb833.png" width=15px>
+- Ruby <img src="https://cdn.emojidex.com/emoji/seal/Ruby.png" width=15px>
+- PostgreSQL <img src="https://user-images.githubusercontent.com/80895497/142954032-f7072df9-3586-48f9-a9e0-7fdd284eb833.png" width=15px>
 
 <!-- Features -->
 
@@ -94,7 +93,6 @@ Everything will be based on the UML class diagram presented below. The data will
 
 To get a local copy up and running, follow these steps.
 
-
 ## Install
 
 ### Clone the repository
@@ -103,6 +101,7 @@ To get a local copy up and running, follow these steps.
 git clone https://github.com/hienphan0111/catalog-of-thing.git
 cd catelog-of-thing
 ```
+
 ### Check your Ruby version
 
 ```shell
@@ -124,26 +123,33 @@ Using [Bundler](https://github.com/bundler/bundler) and [Yarn](https://github.co
 ```shell
 bundle install
 ```
-or 
+
+or
 
 ```shell
 yarn install
 ```
+
 ### run program demo
 
 ```shell
 ruby main.rb
 ```
+
 ### run test
 
 To run a single Rspec test file, you can do the following to run the tests in the `your_spec.rb` file:
+
 ```shell
 rspec spec rspec/your_spec.rb
 ```
+
 To run all Rspec test files in a directory
+
 ```shell
 rspec spec rspec
 ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -168,15 +174,13 @@ rspec spec rspec
 - Twitter: [Alice Mirigo](https://twitter.com/......)
 - LinkedIn: [Alice Mirigo](https://www.linkedin.com/in/alice-mirigo/)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Unit tests
-
+- Movies and source features
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,7 +197,6 @@ Feel free to check the [issues page](../../issues/).
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
-
 
 If you like this project please give me a star.
 

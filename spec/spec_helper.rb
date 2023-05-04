@@ -1,0 +1,7 @@
+require_relative '../components/genre'
+require_relative '../components/music_album'
+require_relative '../components/book'
+require_relative '../components/label'
+require_relative '../components/item'
+require_relative '../components/author'
+require_relative '../components/game'
