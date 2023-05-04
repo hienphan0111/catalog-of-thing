@@ -3,7 +3,7 @@ require_relative 'spec_helper'
 describe MusicAlbum do
 
   before :each do
-    @music_album = MusicAlbum.new('Album',true,'2022-10-13')
+    @music_album = MusicAlbum.new('Album',true,'2002-10-13')
     @genre = Genre.new('Rock')
   end
 
@@ -15,7 +15,7 @@ describe MusicAlbum do
 
   describe "#publish_date" do
     it "returns the correct publish date" do
-      @music_album.publish_date.should eql Date.parse("2022-10-13")
+      @music_album.publish_date.should eql Date.parse("2002-10-13")
     end
   end
 

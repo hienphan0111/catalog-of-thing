@@ -13,7 +13,7 @@ class MusicAlbum < Item
   end
 
   def can_be_archived?
-    @on_spotify == true || super
+    super && @on_spotify
   end
 
   def to_json(*arg)
